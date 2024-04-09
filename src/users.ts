@@ -1,4 +1,6 @@
-export const users = [
+import { User } from "./william-castro/types/users";
+
+export const users: User[] = [
     {
         id: '1',
         name: 'Emilia Clark',
@@ -44,49 +46,49 @@ export const users = [
     {
         id: '7',
         name: 'Carlos Perez',
-        image: 'carlos perez.jpg',
+        image: '',
         role: 'Programador Backend',
         email: ''
     },
     {
         id: '8',
         name: 'Luisa Torres',
-        image: 'luisa torres.jpg',
+        image: '',
         role: 'Diseñadora',
         email: 'luisat@gmail.com'
     },
     {
         id: '9',
         name: 'Javier Mendoza',
-        image: 'javier mendoza.jpg',
+        image: '',
         role: 'Programador Fullstack',
         email: 'javi@gmail.com'
     },
     {
         id: '10',
         name: 'Martha Ruiz',
-        image: 'martha ruiz.jpg',
+        image: '',
         role: 'Programadora',
         email: ''
     },
     {
         id: '11',
         name: 'Luis Perez',
-        image: 'luis perez.jpg',
+        image: '',
         role: 'Programador',
         email: ''
     },
     {
         id: '12',
         name: 'Ana Torres',
-        image: 'ana torres.jpg',
+        image: '',
         role: 'Diseñadora',
         email: null
     },
     {
         id: '13',
         name: 'Carlos Mendoza',
-        image: 'carlos mendoza.jpg',
+        image: '',
         role: 'Programador',
         email: 'carlos.mendoza@gmail.com'
     }
