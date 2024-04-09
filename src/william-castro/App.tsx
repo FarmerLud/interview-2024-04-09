@@ -3,6 +3,7 @@ import { Header } from "./components";
 import { User } from "./types/users";
 import { users } from "../users";
 import ContentUsers from "./components/ContentUsers";
+import iconSearch from "../assets/searchGray1.svg"
 
 const App = () => {
   const [data, setData] = useState<User[]>([]);
@@ -16,8 +17,10 @@ const App = () => {
       }
       const keyB = keyboards.toLowerCase().split(" ");
       const newList = data.filter((user) => {
-        const final = keyB.some((keyword) => user.name.toLowerCase().includes(keyword));
-        return final;
+        /*for (let index = 0; index < keyB.length; index++) {
+          return user.name.toLowerCase().includes(keyB[index])
+        }*/
+        return keyB.some( element => user.name.toLowerCase().includes(element) )
       });
       setData(newList);
     };
@@ -28,14 +31,20 @@ const App = () => {
     <>
       <Header />
       <div className="container mx-auto p-2">
-        <form>
+        <div className="relative border rounded-2xl overflow-hidden shadow w-max bg-white py-2 px-3">
+          <label htmlFor="search">
+            <img className="absolute top-3 left-2" src={iconSearch} alt="Search icon" />
+          </label>
           <input
-            className="border rounded-md shadow py-1 px-4 text-lg"
+            className=" py-1 px-4 text-lg ml-5 outline-none font-bold text-gray-800"
             placeholder="Search user for name"
             type="text"
+            id="search"
             onChange={(element) => setKeyboards(element.target.value)}
           />
-        </form>
+        </div>
+
+        
         <section className="">
           <ContentUsers users={data} />
         </section>

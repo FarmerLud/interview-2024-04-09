@@ -1,6 +1,7 @@
 import { User } from "../types/users";
 import imgUser from "../../assets/defaultUser.jpg"
 import { useState } from "react";
+
 interface Props {
   user: User;
 }
@@ -8,7 +9,7 @@ interface Props {
 const Profile = ({ user }: Props) => {
   const [active, setActive] = useState(false);
   return (
-    <article onClick={() => setActive(!active)} className={`flex items-center gap-3 p-3 bg-white border-2 rounded-lg ${active ? 'border-indigo-500': 'border-white'} shadow transition-all`}>
+    <article onClick={() => setActive(!active)} className={`flex items-center gap-3 p-3 bg-white border-2 rounded-3xl ${active ? 'border-indigo-500': 'border-gray-300'} shadow transition-all`}>
       <picture className="">
         <img className="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover object-center max-w-60 max-h-60" src={user.image ? `/images/${user.image  }` : imgUser} alt={user.name} />
       </picture>
