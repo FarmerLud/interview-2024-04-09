@@ -3,5 +3,5 @@ export interface IUser {
   name: string;
   image: string;
   role: string;
-  email: string;
+  email: string | null;
 }
