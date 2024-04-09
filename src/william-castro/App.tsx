@@ -20,7 +20,7 @@ const App = () => {
         /*for (let index = 0; index < keyB.length; index++) {
           return user.name.toLowerCase().includes(keyB[index])
         }*/
-        return keyB.some( element => user.name.toLowerCase().includes(element) )
+         return keyB.some( element => user.name.toLowerCase().includes(element) )
       });
       setData(newList);
     };
